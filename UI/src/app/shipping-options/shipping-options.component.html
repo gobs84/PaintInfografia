@@ -1,0 +1,57 @@
+<div class="container-fluid" id="shipping-cart-id">
+  <div *ngFor="let address of addressess; let j = index" class="card text-white bg-dark mb-3" style="max-width: 20rem;">
+    <div class="card-header">{{address.Identifier}}</div>
+    <div class="card-body">
+      <p class="card-text">{{address.Line1}}</p>
+      <p class="card-text">{{address.Line2}}</p>
+      <p class="card-text">{{address.City}}</p>
+      <p class="card-text">{{address.Zone}}</p>
+      <p class="card-text">{{address.Phone}}</p>
+      <div class="m-1 btn-group " role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-success" (click)="editAddress(j)">EDIT</button>
+        <button class="btn btn-outline-primary" (click)="deliver()">Deliver adress</button>
+        <button type="button" class="btn btn-outline-danger" (click)="deleteAddress(j)">DELETE</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isCreated || isDuplicated || isError" class="alerts">
+  <p *ngIf="isCreated">The Adress was Added Succesfully</p>
+  <p *ngIf="isDuplicated">The Adress already exists</p>
+  <p *ngIf="isError">Error, try again later</p>
+</div>
+<form class="p-2" id="add-address-id">
+    <h3>Add a new Address</h3>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="identifier">Adress Identifier:</label>
+      <input type="text" class="form-control" id="Identifier" [formControl]="cuForm.controls['Identifier']" placeholder="AdressIdentifier" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="line1">Adress Line 1: </label>
+      <input type="text" class="form-control" id="Line1" [formControl]="cuForm.controls['Line1']" placeholder="Address Line1"  required>
+    </div>
+    <div class="col-md-4 mb-3">
+        <label for="line2">Adress Line 2: </label>
+        <input type="text" class="form-control" id="Line2" [formControl]="cuForm.controls['Line2']" placeholder="Address Line2"  required>
+      </div>
+    <div class="col-md-4 mb-3">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="City" [formControl]="cuForm.controls['City']" placeholder="City" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="Phone" [formControl]="cuForm.controls['Phone']" placeholder="Phone" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="zone">Zone</label>
+      <input type="text" class="form-control" id="Zone" [formControl]="cuForm.controls['Zone']" placeholder="Zone" required>
+    </div>
+  </div>
+  <button *ngIf="!edit" class="btn btn-outline-info" (click)="createAddress()">Save</button>
+  <button *ngIf="edit" class="btn btn-outline-info" (click)="editAddressSave()">Save Edit</button>
+</form>
+
+

@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center" id="log-in-flex-id">
+  <form id="log-in-form-id" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <fieldset>
+        <legend>Log In</legend>
+        <div class="form-group row">
+        </div>
+        <div class="form-group">
+          <label for="log-in-input-username">Username</label>
+          <input [(ngModel)]="getUserData.Username" name="Username" class="form-control" type="text" id="log-in-input-username-id" placeholder="Enter username" required>
+        </div>
+        <div *ngIf="isGhost || isError" class="alerts">
+          <p *ngIf="isGhost">This user doesn't exist!</p>
+          <p *ngIf="isError">Error, please try again later</p>
+        </div>
+        <button class="btn btn-outline-primary">Submit</button>
+      </fieldset>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperProject", "SuperProject\SuperProject.csproj", "{8C0DF7CD-B2D4-4EC9-9E5A-6DC9ED9895C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAPI", "WAPI\WAPI.csproj", "{761900F7-94C1-46BB-BED6-CA5144814926}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C0DF7CD-B2D4-4EC9-9E5A-6DC9ED9895C7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8C0DF7CD-B2D4-4EC9-9E5A-6DC9ED9895C7}.Debug|Any CPU.Build.0 = Debug|x86
+		{8C0DF7CD-B2D4-4EC9-9E5A-6DC9ED9895C7}.Release|Any CPU.ActiveCfg = Debug|x86
+		{8C0DF7CD-B2D4-4EC9-9E5A-6DC9ED9895C7}.Release|Any CPU.Build.0 = Debug|x86
+		{761900F7-94C1-46BB-BED6-CA5144814926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761900F7-94C1-46BB-BED6-CA5144814926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761900F7-94C1-46BB-BED6-CA5144814926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761900F7-94C1-46BB-BED6-CA5144814926}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92418C8C-4F0B-4904-A0A9-DAF1B80ACFC3}
+	EndGlobalSection
+EndGlobal

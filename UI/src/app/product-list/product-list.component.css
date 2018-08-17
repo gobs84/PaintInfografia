@@ -1,0 +1,11 @@
+#product-card{
+    width: 350px;
+    margin-top: 5%;
+    display: inline-grid;
+}
+#product-list-container-id{
+    align-items: center;
+    display: inline;
+    justify-content: center;
+    margin-left: 10%;
+}

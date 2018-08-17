@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center" id="product-detail-id">
+  <div class="col-sm-4">
+    <img class="card-img" *ngIf="product"src="{{product.ImageURL}}" alt="Product image" width="10%">
+  </div>
+  <div *ngIf="product" class="col-sm-4">
+   <p class="card-text">Nombre: Producto {{product.Name}}</p>
+    <p class="card-text">Categoria: {{product.Category.name}}</p>
+    <p class="card-text">Precio :{{product.Price}} $</p>
+    <p class="card-text">Codigo: {{product.Code}}</p>
+    <p class="card-text">Descripcion: {{product.Description}}</p>
+   <br>
+   <div class="d-flex justify-content-center"> 
+   <input *ngIf="log"id = "cant" type="number" min="1" max="500" step="1" value="1" size="6" name="cant" [(ngModel)]='cant'>
+   <button *ngIf="log" type="button" class="btn btn-outline-success" id="button-submit-id" (click)="onClick()">Add </button>
+  </div>
+  </div>
+</div>

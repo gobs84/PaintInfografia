@@ -1,0 +1,18 @@
+<ng-container *ngFor="let product of products; let i=index">
+  <div class="container-fluid" id="product-list-container-id">
+    <div *ngIf="i<8" class="card mb-3" id="product-card">
+      <h3 class="card-header">{{product.Name}}</h3>
+      <div class="card-body">
+        <h5 class="card-title">{{product.Description}}</h5>
+      </div>
+      <img style="height: 200px; width: 100%; display: block;" src="{{product.ImageURL}}" alt="Card image">
+      <div class="card-body">
+        <p class="card-text">Price: {{product.Price}} $</p>
+      </div>
+      <div class="card-body">
+        <a href="/product-detail/{{product.Code}}" class="card-link">See more...</a>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
